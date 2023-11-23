@@ -1,0 +1,32 @@
+
+body{
+    background: white;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background-color: #fff;
+    z-index: 9999;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: #fff;
+}
+.content {
+    margin-top: 80px; /* высота хедера */
+    margin-bottom: 60px; /* высота футера */
+}
+.review-item {
+    border: 1px solid black;
+}
+
