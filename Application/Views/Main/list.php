@@ -1,19 +1,27 @@
 <div class="header"><h1>Гостевая книга</h1></div>
-<form action="">
-    <input type="text">
-    <input type="text">
-</form>
+<div class="form-container">
+    <form id="form" action="main/add" method="post">
+        <div class="name-input-container"><input type="text" class="name-input" name="message-author"></div>
+        <div class="text-area-container"><textarea name="message-text" class="text-area"></textarea></div>
+        <div><input type="submit" value="Отправить"></div>
+    </form>
+</div>
 <div class="reviews-list">
-    <?foreach ($arResult as $val):?>
+    <? foreach ($arResult as $val): ?>
         <div class="review-item">
-            <div class="headline">
-                <div class="border_date"><p><?=date('d.m.Y', strtotime($val['date']));?></p></div>
-                <div class="author-name"><p><?=$val['name'];?></p></div>
-            </div>
-            <div class="message"><?= $val['message']; ?></div>
+                <table>
+                    <tr>
+                        <td><div class="author-name"><?= $val['name']; ?></div></td>
+                        <td><div class="date"><?= date('d.m.Y', strtotime($val['date'])); ?></div></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="message"><?= $val['message']; ?></div>
+                        </td>
+                    </tr>
+                </table>
         </div>
-    <?endforeach;?>
-
+    <? endforeach; ?>
 
 
     <!--<div class="pagination-block">
@@ -42,7 +50,6 @@
         </ul>
     </div> -->
 </div>
-
 
 
 

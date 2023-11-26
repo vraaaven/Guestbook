@@ -12,21 +12,45 @@ body{
     height: 80px;
     background-color: #fff;
     z-index: 9999;
+    border-bottom: 1px solid black;
 }
 
 .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
     height: 60px;
     background-color: #fff;
+    border-top: 1px solid black;
 }
 .content {
-    margin-top: 80px; /* высота хедера */
-    margin-bottom: 60px; /* высота футера */
+    margin: 100px;
+}
+.form-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.name-input-container {
+    margin-bottom: 10px;
+}
+.name-input {
+    width: 500px;
+}
+.text-area {
+    width: 500px;
+}
+textarea {
+    resize: none;
 }
 .review-item {
-    border: 1px solid black;
+    border: 1px solid darkslateblue;
+    border-radius: 30px;
+    background: darkslateblue;
+    color: white;
+    margin-bottom: 10px;
+}
+table{
+    text-align: center;
+    margin: auto;
+}
+td{
+    padding: 10px;
 }
 

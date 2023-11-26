@@ -3,16 +3,12 @@
 namespace Application\Models;
 
 use Application\Core\Model;
-use Application\Lib\Pagination;
+
 class  Main extends Model
 {
-    public function getList($start,$limit,$tableName)
+    public function getList($tableName)
     {
-        $params = [
-            'start' => $start,
-            'limit' => $limit,
-        ];
-        return $this->db->row('SELECT * FROM '.$tableName.' ORDER BY date DESC LIMIT :start, :limit',$params);
+        return $this->db->row('SELECT * FROM '.$tableName.' ORDER BY date DESC');
     }
     public function getCount($tableName)
     {
@@ -20,12 +16,20 @@ class  Main extends Model
     }
     public function getItem($id,$tableName)
     {
-
         return $this->db->row('SELECT * FROM '.$tableName.' WHERE id ='.$id);
     }
     public function getLastestItem($tableName)
     {
         $result = $this->db->row('SELECT * FROM '.$tableName.' ORDER BY date DESC LIMIT 1;');
         return $result;
+    }
+    public function itemAdd($post,$tableName) {
+        $params = [
+            'id' =>$post['id'],
+            'name' => $post['name'],
+            'message' => $post['text'],
+            'date' => $post['date']
+        ];
+        $this->db->query('INSERT INTO '.$tableName.' VALUES (:id, :name, :message, :date)', $params);
     }
 }

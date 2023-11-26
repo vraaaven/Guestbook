@@ -8,7 +8,7 @@
 <body>
 <div class="header">
     <div>
-        <img src="/Public/Images/logo.jpg" class="logo">
+        <!--<img src="/Public/Images/logo.jpg" class="logo">-->
     </div>
     <div class="name">
         <p>Тестовый сайт</p>
@@ -20,5 +20,8 @@
 <div class="footer">
     <p>&copy; 2023 &mdash; 2023 &laquo;Футер&raquo;</p>
 </div>
+<script src="/Public/Scripts/jquery.js"></script>
+<script src="/Public/Scripts/ajax.js"></script>
+<script src="/Public/Scripts/test.js"></script>
 </body>
 </html>

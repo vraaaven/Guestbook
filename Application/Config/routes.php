@@ -5,24 +5,41 @@ return[
         'controller' => 'main',
         'action' => 'list',
     ],
-    'news/list/page={page:\d+}' =>[
-        'controller' => 'news',
-        'action' => 'list',
+    'main/add' =>[
+        'controller' => 'main',
+        'action' => 'add',
     ],
-    'detail/id={id:\d+}' =>[
-        'controller' => 'news',
-        'action' => 'detail',
+    // AdminController
+    'admin' => [
+        'controller' => 'admin',
+        'action' => 'login',
     ],
-    'news/list/detail/id={id:\d+}' =>[
-        'controller' => 'news',
-        'action' => 'detail',
+    'admin/login' => [
+        'controller' => 'admin',
+        'action' => 'login',
     ],
-    'news/list' =>[
-        'controller' => 'news',
-        'action' => 'list',
+    'admin/logout' => [
+        'controller' => 'admin',
+        'action' => 'logout',
     ],
-    'news/list' =>[
-        'controller' => 'news',
-        'action' => 'list',
-    ]
+    'admin/add' => [
+        'controller' => 'admin',
+        'action' => 'add',
+    ],
+    'admin/edit/{id:\d+}' => [
+        'controller' => 'admin',
+        'action' => 'edit',
+    ],
+    'admin/delete/{id:\d+}' => [
+        'controller' => 'admin',
+        'action' => 'delete',
+    ],
+    'admin/posts/{page:\d+}' => [
+        'controller' => 'admin',
+        'action' => 'posts',
+    ],
+    'admin/posts' => [
+        'controller' => 'admin',
+        'action' => 'posts',
+    ],
 ];
