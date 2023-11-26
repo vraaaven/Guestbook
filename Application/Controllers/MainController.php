@@ -28,11 +28,16 @@ class MainController extends Controller
             $tableName = "Book";
             $model = Db::model('Main');
             $lastItem = $model->getLastestItem($tableName);
+            if($lastItem != null)
+                $lastItem = $lastItem[0]["id"]+1;
+            else
+                $lastItem = 0;
             $post = [
-                "id" => $lastItem[0]["id"] + 1,
+                "id" => $lastItem,
                 "name" => $_POST["message-author"],
                 "text" => $_POST["message-text"],
-                "date" => date('Y-m-d H:i:s')
+                "date" => date('Y-m-d H:i:s'),
+                "session" => $_SESSION["id"]
             ];
             $model->itemAdd($post, $tableName);
             $result['status'] = 'success';
@@ -42,6 +47,13 @@ class MainController extends Controller
             $result['status'] = 'error';
             $result['message'] = 'Имя и сообщение обязательны';
         }
+        echo json_encode($result);
+    }
+    public function deleteAction() {
+        var_dump($_SESSION);
+        $model = Db::model('Main');
+        $model->deleteItem($_SESSION['id']);
+        $result['status'] = 'success';
         echo json_encode($result);
     }
 

@@ -28,8 +28,15 @@ class  Main extends Model
             'id' =>$post['id'],
             'name' => $post['name'],
             'message' => $post['text'],
-            'date' => $post['date']
+            'date' => $post['date'],
+            'session' => $post['session']
         ];
-        $this->db->query('INSERT INTO '.$tableName.' VALUES (:id, :name, :message, :date)', $params);
+        $this->db->query('INSERT INTO '.$tableName.' VALUES (:id, :name, :message, :date, :session)', $params);
+    }
+    public function  deleteItem($session){
+        $params = [
+            'session' => $session,
+        ];
+        $this->db->query('DELETE FROM Book WHERE session = :session', $params);
     }
 }

@@ -2,10 +2,9 @@
 
 return [
     'all' => [
-        'index',
-        'about',
-        'contact',
-        'post',
+        'list',
+        'add',
+        'delete'
     ],
     'authorize' => [
         //

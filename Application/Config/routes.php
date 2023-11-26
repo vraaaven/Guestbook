@@ -9,6 +9,10 @@ return[
         'controller' => 'main',
         'action' => 'add',
     ],
+    'main/delete' =>[
+        'controller' => 'main',
+        'action' => 'delete',
+    ],
     // AdminController
     'admin' => [
         'controller' => 'admin',

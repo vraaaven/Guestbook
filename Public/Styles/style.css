@@ -39,6 +39,8 @@ body{
 textarea {
     resize: none;
 }
+.review-item-container {
+}
 .review-item {
     border: 1px solid darkslateblue;
     border-radius: 30px;
