@@ -1,0 +1,174 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    background: lightgray;
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    position: absolute;
+    top:10%;
+    left: 10%;
+    height: 60%;
+    width: 50%;
+    background: white;
+    border: 2px white solid;
+    border-radius: 30px;
+}
+.img{
+    padding: 10px;
+    height: 300px;
+}
+.footer {
+    margin-top: 50%;
+    height: 60px;
+    background-color: #fff;
+    border-top: 1px solid black;
+    bottom: 0;
+    width: 100%;
+}
+.login-background
+{
+    width: 100%;
+    height: 100vh;
+    background: lightseagreen;
+}
+.admin-login-title {
+    text-align: left;
+    padding: 30px;
+    font-size: 30px;
+    margin-top: 60px;
+    font-weight: bold;
+}
+.form-control{
+    font-size: 20px;
+    margin-left: 30px;
+    padding: 10px;
+    width: 50%;
+    height: 30px;
+}
+.login-button {
+    font-size: 20px;
+    border: 1px solid black;
+    background: black;
+    width: 100px;
+    height: 50px;
+    color: white;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.admin-nav
+{
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    background: linear-gradient(to right,lightseagreen,#00dbce);
+    display: flex;
+    flex-direction: row;
+    height: 90px;
+}
+.navbar-main
+{
+    font-family: "Malgun Gothic";
+    padding: 25px;
+    border-right: 1px solid white;
+}
+.navbar-main:hover{
+    background: black;
+}
+.navbar-main:hover a{
+    color: white;
+}
+.main-link{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    vertical-align: center;
+}
+
+.navbar-item{
+    font-family: "Malgun Gothic";
+    padding: 25px;
+}
+.navbar-item:hover{
+    background: black;
+}
+.nav-link{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+.posts-list {
+    margin:100px 50px 10px 50px;
+    background: white;
+
+}
+.posts-header{
+    font-size: 26px;
+    font-weight: bold;
+}
+.table{
+    width: 90%;
+    border: 2px black solid;
+    margin: 10px;
+    padding-bottom: 10px;
+}
+.header-row{
+    text-align: left;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+.item-text{
+    border-right: 1px solid black;
+    text-align: left;
+}
+.name-item{
+    border-bottom: 1px solid black;
+}
+.btn {
+    width: 120px;
+    background: black;
+    color: white;
+    text-align: center;
+}
+
+.edit-link {
+    padding: 0 10px;
+    text-decoration: none;
+    color:white;
+}
+.container-edit{
+    margin:100px auto;
+    background: white;
+    width: 80%;
+    height: 80vh;
+}
+.header-edit{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px
+}
+.edit-form {
+    padding: 10px;
+    font-size: 20px;
+}
+.form-control-text {
+    width:500px ;
+}
+.form-control-area {
+    width: 500px;
+}
+.form-group {
+    display: flex;
+    flex-direction: row;
+}
+.field-name {
+    width: 100px;
+}
+.btn-save {
+    margin-top: 20px;
+    color: white;
+    background: black;
+    width: 100px;
+    height: 50px;
+}

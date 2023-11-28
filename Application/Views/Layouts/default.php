@@ -22,6 +22,7 @@
 </div>
 <script src="/Public/Scripts/jquery.js"></script>
 <script src="/Public/Scripts/ajax.js"></script>
-<script src="/Public/Scripts/test.js"></script>
+<script src="/Public/Scripts/main.js"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 </body>
 </html>

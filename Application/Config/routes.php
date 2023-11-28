@@ -13,6 +13,18 @@ return[
         'controller' => 'main',
         'action' => 'delete',
     ],
+    'main/edit' =>[
+        'controller' => 'main',
+        'action' => 'edit',
+    ],
+    'main/comment' =>[
+        'controller' => 'main',
+        'action' => 'comment',
+    ],
+    'main/rating' =>[
+        'controller' => 'main',
+        'action' => 'rating',
+    ],
     // AdminController
     'admin' => [
         'controller' => 'admin',

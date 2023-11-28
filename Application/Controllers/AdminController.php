@@ -39,10 +39,9 @@ class AdminController extends Controller {
                 $this->view->message('error', $this->model->error);
             }
             $model->postEdit($_POST, $this->route['id']);
-            /*if ($_FILES['img']['tmp_name']) {
+            if ($_FILES['img']['tmp_name']) {
                 $model->postUploadImage($_FILES['img']['tmp_name'], $this->route['id']);
-            }*/
-            //$this->view->message('success', 'Сохранено');
+            }
         }
         $vars = [
             'data' => $model->postData($this->route['id'])[0],

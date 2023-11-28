@@ -4,7 +4,10 @@ return [
     'all' => [
         'list',
         'add',
-        'delete'
+        'delete',
+        'edit',
+        'comment',
+        'rating'
     ],
     'authorize' => [
         //

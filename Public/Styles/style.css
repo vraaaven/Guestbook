@@ -1,8 +1,13 @@
-
+html {
+    height: 100%;
+}
 body{
-    background: white;
+    background: lightgray;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 .header {
     position: fixed;
@@ -10,49 +15,197 @@ body{
     left: 0;
     right: 0;
     height: 80px;
-    background-color: #fff;
+    background: linear-gradient(to right,lightseagreen,#00dbce);
     z-index: 9999;
     border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: row;
+}
+.navbar-main
+{
+    font-family: "Malgun Gothic";
+    padding: 25px;
+    border-right: 1px solid white;
+}
+.navbar-main:hover{
+    background: black;
+}
+.navbar-main:hover a{
+    color: white;
+}
+.main-link{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    vertical-align: center;
+}
+.navbar-item{
+    font-family: "Malgun Gothic";
+    padding: 25px;
+}
+.navbar-item:hover{
+    background: black;
+}
+.nav-link{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
 }
 
 .footer {
+    margin-top: 10%;
     height: 60px;
     background-color: #fff;
     border-top: 1px solid black;
+    bottom: 0;
+    width: 100%;
 }
 .content {
     margin: 100px;
+    background: white;
+    padding: 20px;
 }
 .form-container {
-    text-align: center;
+    /*text-align: center;*/
     margin-bottom: 30px;
+}
+.main-btn{
+    font-size: 16px;
+    margin-top: 10px;
+    color: white;
+    background: black;
+    width: 100px;
+    height: 50px;
 }
 .name-input-container {
     margin-bottom: 10px;
 }
 .name-input {
-    width: 500px;
+    width: 600px;
+    border: 2px solid lightseagreen;
+    border-radius: 10px;
 }
 .text-area {
-    width: 500px;
+    width: 600px;
+    border: 2px solid lightseagreen;
+    border-radius: 10px;
 }
 textarea {
     resize: none;
 }
 .review-item-container {
+    margin:10px;
 }
 .review-item {
-    border: 1px solid darkslateblue;
+    border: 2px solid lightseagreen;
     border-radius: 30px;
-    background: darkslateblue;
-    color: white;
+    background: white;
+    color: black;
     margin-bottom: 10px;
 }
-table{
-    text-align: center;
-    margin: auto;
+.date{
+    padding:10px ;
 }
-td{
+.author-name {
+    border-bottom: 1px solid gray;
+}
+.message-container {
     padding: 10px;
 }
+.rating-area {
+    overflow: hidden;
+    width: 265px;
+}
+.img{
+    padding: 10px;
+    height: 100px;
+}
+.rating-area:not(:checked) > input {
+    display: none;
+}
+.rating-area:not(:checked) > label {
+    float: right;
+    width: 42px;
+    padding: 0;
+    cursor: pointer;
+    font-size: 32px;
+    line-height: 32px;
+    color: lightgrey;
+    text-shadow: 1px 1px #bbb;
+}
+.rating-area:not(:checked) > label:before {
+    content: '★';
+}
+.rating-area > input:checked ~ label {
+    color: lightseagreen;
+    text-shadow: 1px 1px #c60;
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+    color: lightseagreen;
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+    color: lightseagreen;
+    text-shadow: 1px 1px lightseagreenenrod;
+}
+.rate-area > label:active {
+    position: relative;
+}
+.rating-result {
+    width: 265px;
+    margin: 0 auto;
+}
+.rating-result span {
+    padding: 0;
+    font-size: 32px;
+    margin: 0 3px;
+    line-height: 1;
+    color: lightgrey;
+    text-shadow: 1px 1px #bbb;
+}
+.rating-result > span:before {
+    content: '★';
+}
+.rating-result > span.active {
+    color: lightseagreen;
+    text-shadow: 1px 1px #c60;
+}
 
+.rating-mini {
+    display: inline-block;
+    font-size: 0;
+}
+.rating-mini span {
+    padding: 0;
+    font-size: 20px;
+    line-height: 1;
+    color: lightgrey;
+}
+.rating-mini > span:before {
+    content: '★';
+}
+.rating-mini > span.active {
+    color: lightseagreen;
+}
+.comment-header {
+
+}
+.comments-container{
+    border: 2px solid lightseagreen;
+    margin:10px 30px;
+}
+.comment-item{
+    padding: 10px;
+    border: 2px solid lightseagreen;
+    border-radius: 30px;
+    background: white;
+    color: black;
+    margin:0 20px 10px 20px;
+}
+.form-comment{
+
+}

@@ -35,7 +35,7 @@ class Admin extends Model {
         $img = new Imagick($path);
         $img->cropThumbnailImage(1080, 600);
         $img->setImageCompressionQuality(80);
-        $img->writeImage('public/materials/'.$id.'.jpg');
+        $img->writeImage($_SERVER['DOCUMENT_ROOT'].'/Public/Images/'.$id.'.jpg');
     }
 
     public function isPostExists($id) {
@@ -49,8 +49,9 @@ class Admin extends Model {
         $params = [
             'id' => $id,
         ];
+        $this->db->query('DELETE FROM Comments WHERE idParent = :id', $params);
         $this->db->query('DELETE FROM Book WHERE id = :id', $params);
-        //unlink('public/materials/'.$id.'.jpg');
+        unlink($_SERVER['DOCUMENT_ROOT'].'/Public/Images/'.$id.'.jpg');
     }
 
     public function postData($id) {
